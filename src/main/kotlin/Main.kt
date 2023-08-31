@@ -1,14 +1,17 @@
 fun main(args: Array<String>) {
 
-    val Timeago: Int = 2 * 60
+    val Timeago: Int = 41 * 60
     val Timeagoin = Timeago / 60
     val Timeagoin60 = Timeago / 60 / 60
 
-
+//такие значения как 3, 4 минуты и 31, 41, 51 минуту назад.
     var agoToText = when (Timeago) {
         60 -> println("был(а) 1 минуту назад")
-        120 -> println("был(а) 2 минуты назад")
+        in 120..60 * 4 -> println("был(а) $Timeagoin минуты назад")
         21 * 60 -> println("был(а) 21 минуту назад")
+        31 * 60 -> println("был(а) 31 минуту назад")
+        41 * 60 -> println("был(а) 41 минуту назад")
+        51 * 60 -> println("был(а) 51 минуту назад")
         in 60 * 22..60 * 24 -> println("был(а) $Timeagoin минуты назад")
         in 60 * 32..60 * 34 -> println("был(а) $Timeagoin минуты назад")
         in 60 * 42..60 * 44 -> println("был(а) $Timeagoin минуты назад")
